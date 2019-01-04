@@ -1,0 +1,315 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+<P><FONT size="+2"><B><A href="http://www.aicml.cs.ualberta.ca/banff04/icml/index.html">ICML2004</A>のおもいで</B></FONT></P>
+<P>オフィシャルまとめスライドは<A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/slides/ICML04-Summary-Short.pdf">ココ</A><BR>
+学会誌に書いた報告は<A href="http://www.geocities.jp/kashi_pong/publication/ICML2004report.pdf">ココ</A>と<A href="http://www.geocities.jp/kashi_pong/publication/banff.pdf">ココ</A></P>
+<UL>
+  <LI>2004/7/3 <A href="http://www.aicml.cs.ualberta.ca/banff04/icml/pages/schedule.htm#Saturday">到着</A>
+  <UL>
+    <LI>バンクーバーまでは8時間。8時間までなら耐えられると思った。
+    <LI>ただしその後が長い。待ち時間2時間⇒カルガリーへ2時間⇒待ち時間2時間⇒バンフへ2時間（バス）
+    <LI>着いたら23時。眠いけど、壁に向かって喋る。
+    <LI>バンフの街、せまりくる山が日本にはありえないかんじ<BR>
+    <IMG src="banff1.jpg" border="0" width="192" height="254">
+  </UL>
+  <LI>2004/7/4 <A href="http://www.aicml.cs.ualberta.ca/banff04/icml/pages/schedule.htm#Sunday">１日目</A>
+  <UL>
+    <LI>一日目はチュートルアルと、カーネル関係をCOLTとICML全部集めたセッション。我々のはそのなかで発表
+    <LI>聞いた話
+    <UL>
+      <LI>久しぶりにみたらメガネを掛けてインテリっぽくなっていた、<A href="http://www.cs.bris.ac.uk/%7Egaertner/index.html">ゲルトナ</A>の<A href="http://www.cs.bris.ac.uk/%7Egaertner/icml/index.html">チュートリアル「Kernels for Structured Data」</A>
+      <UL>
+        <LI>構造データのカーネルを
+        <UL>
+          <LI>externally structured kernels: インスタンス同士の関係が構造として与えられるもカーネル。関係がグラフで表されるDifffusion
+      Kernelとかや、分布で表されるFisher Kernelなど
+          <LI>internally structured kernels: Convolution Kernelsなど、インスタンス内の部分構造の積み重ねで定義されるカーネル
+        </UL>
+        のふたつにグループわけして説明してるのは良かった。
+        <LI>Kernels for hypergraph。行列Gがhypergraph上のノードのグルーピングを表す（g_{ij}
+        = node iがcluster(?) jに属するときに1、そうでないときに0をとる）として定義される場合に、その上でのWalkをGG'を使って歩く、すなはち、あるClusterから、あるClusterへの一歩が成立する条件はそれらが共通のノードを含むこと。そりゃできるだろうけど…まだやるのか！？
+      </UL>
+      <LI>ベイジアンネットワークにカーネルを使うはなし（COLT）
+      <UL>
+        <LI>VC次元がいくつだみたいな話だったのだが、どこの部分にどうカーネルが入ったのかわからずじまい。
+        <LI>COLTは難しい…
+      </UL>
+      <LI>Sortingをカーネル化する話（COLT）
+      <UL>
+        <LI>気になったけど、どこの部分がソートなのか理解できず、とにかくカーネルPCAと関係あるらしい。
+        <LI>やっぱりCOLTは難しい…
+      </UL>
+      <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/76.pdf">HMSVMの続きの話</A>
+      <UL>
+        <LI>ラベリングに限定せず、入力と出力が一般的な構造をもつとする。出力の比較も0/1じゃなくて、その間の距離で損失を定義できる。
+        <LI>読むべき論文:<A href="http://books.nips.cc/papers/files/nips16/NIPS2003_AA04.pdf">Maximum margin markov network</A> [Tasker et al 2003 in NIPS]
+        <UL>
+          <LI>ラベリングに関係あるようだ
+        </UL>
+      </UL>
+      <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/321.pdf">カーネルを混ぜる話</A>（なんたらペーパーに選ばれた）
+      <UL>
+        <LI>いくつかのカーネル関数が与えられたときに、その混合比の和が１の制約のもとで、SVMをまとめて最適化する。
+        <LI>微分不可になるので、SMOがそのまま適用はできないが、正則化することで、できるようになる方法を提案してる気がする…。（わからない、要復習）
+      </UL>
+      <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/411.ps">グラフカーネルの拡張</A>
+      <UL>
+        <LI>あるノードのまわりの情報を、ノードのラベルにとりこむ拡張と、ランダムウォークで引き返さない拡張の２つがあった。
+        <LI><A href="http://www.geocities.jp/kashi_pong/publication/icml2003.pdf">自分の論文</A>が説明され、土台になるさまは、感動的なものがあった。こうありたい。
+      </UL>
+    </UL>
+    <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/180.pdf">自分の発表</A>
+    <UL>
+      <LI>内容は、流行りの構造間のマッピング学習（とくにラベリング問題）を、カーネル化した話。
+      <A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/55.pdf">カーネルCRF</A>や<A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/76.pdf">HMSVMの続き</A>と同じような話だが、これらと違うのが、あくまでconvolution kernel、つまり任意サイズのfeatureを多項式時間で扱えるカーネルを、この手の問題に導入ことを目標にした研究であるということ。
+      <LI>セッションの中で最後の4番目だったのだが、「○○（不明）なので1番目とかわってくれ」と、HMSVMの彼に言われ交換。
+      おかげで聴衆の層が被っているゲルトナのチュートリアルと時間がかぶってしまったのはマイナス要因。
+      <LI>それにしても、研究会に引き続き、またも、無反応でした。 おりしも朝、以前論文を送った先生からも遠まわしに「オマエの論文はわからん」というメールがとどいておりました…。
+      うーん、やはり何か問題があるはずだ。 記号？根本？確かに、ストーリーというか、差分がとてもわかりにくい気はする。
+      最近は、やはりCollinsのrankingから話をつなげたほうがいいような気がしている。
+      <LI>ICMLの習慣で、夜にごはんを食べながら、全員ポスターセッションというのがあるのだが、これは良い習慣であると思う。自分に関係のあるひとと直接に話ができるし、向こうもこっちの話を聞く気でくるからちゃんと聞いてくれるし、質問もわからせようとしてくれる。イイ。ここではいろいろなひとと話ができた。
+    </UL>
+    <LI>会った人、できごと、知ったこと
+    <UL>
+      <LI>阿久津先生の研究室の助手の上田さんにあった。 いろいろ教えてもらい、会議を通じてずいぶんとお世話になった。
+      <LI>ポスターセッションでVertさんと話した。初めて会った。自分でも忘れてた、説明が面倒で記述をごまかしてる部分を指摘してきた。
+      すごい。
+      <LI>グラフカーネル拡張のFirstAuthorのピエーrreさんとも話せた。 お礼言い忘れた。
+      <LI>ダンさんというワトソンで機械学習をやってるひとにあった。 威勢のいい人であった。
+      <LI>イーワイに会った。 2年前の再会以来。そういえば「オネアミスの翼」は彼の家で初めて観たのだった。
+      彼はグラフィカルモデルの研究を続けているようだ、彼のやることは初めは意味がわからないけど、あとでけっこう面白いことが判明するのだ…。
+      <LI>ニューヨークでPHDをやっている方に会った。 今度日本に来るらしいので、勉強会のゲストに誘っておいた。
+      <LI>Googleのひとに会った。むちゃくちゃでか（太）かった。 ご飯タダだから？ちなみにご飯のときにGoogleケーキがあった。
+      写真撮っとけば良かったなあ。
+      <LI>コロンビア大に<A href="http://microarray.cpmc.columbia.edu/gist/">Gist</A>というSVMの外付けカーネル可能のパッケージがあるらしい。
+      <LI>0/1のカーネルに使う関数、Dirac Functionといえばよいらしい。
+    </UL>
+    <LI>Lessons Learned
+    <UL>
+      <LI>アルゴリズムの名前がキャッチーなのは重要。 そして、ステップに名前をつける。
+      たとえば、KC(Kick &amp; Chop)アルゴリズムならKステップとCステップに分ける。
+      <LI>アナロジーで押せ。どうも皆、物理とのアナロジーとかに弱い。 わけのわからん演算子から、キルヒホッフ（高３）までよりどりみどり。
+      <LI>海外のVAIOは大きい
+    </UL>
+    <LI>会場だった<A href="http://www.banffparklodge.com/">Banff Park Lodge</A>。バンフの宿は大体こんなシルバニアファミリー風。<BR>
+    <IMG src="banff2.jpg" border="0" width="319" height="243">
+  </UL>
+  <LI>2004/7/5 <A href="http://www.aicml.cs.ualberta.ca/banff04/icml/pages/schedule.htm#Monday">２日目</A>
+  <UL>
+    <LI>聞いた話
+    <UL>
+      <LI>Invited talk: <A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/presentations/blackICML04.pdf">コンピュータービジョンの人</A>
+      <UL>
+        <LI>カメラで撮った映像から、人間の姿勢を抽出する話があった。 人間は、関節の角度など30変数以上でモデル化される。
+        <LI>それぞれの肢が、画像としてどのように見えはずかというモデルをつかって、それぞれの肢を別々に検出すると誤りが多くなる。
+        <LI>そこで、四肢がどのようにつながっているとか、人間の形についての制約をグラフの形でいれたグラフィカルモデルをつくり、全体をまとめてマッチングをとることで、性能が上がる。
+        <LI>角度の分布といえば、（ローカルで流行っている）vMF分布。 複数の角度に相関があるような場合の角度の確率分布って考えられるのだろうか
+      </UL>
+      <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/85.pdf">カーネルで非線形次元削減の話</A>（学生のベストペーパーのひとつ）
+      <UL>
+        <LI>通常、カーネルPCAとかの次元削減では、空間中のデータを低次元の多様体に埋め込む。
+        <LI>変換前と変換後で、近傍の距離が保存されるような制約を入れつつ、変換後の（制約のない）点間の距離が最大になるようにする（丸まったネットをなるべくひっぱって床に広げようとする感じ！）と、半正定値計画法になる。
+        <LI>やたらうまくいく。 面白そう。
+        <LI>教訓：とりあえず、なんでもいいからタスクを決めて、半正定値計画とかに持っていくとかっこよくていい感じ。
+      </UL>
+      <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/150.ps">階層的なクラス分類のはなし</A>
+      <UL>
+        <LI>ヤフーのカテゴリ分けを自動でやるような話。
+        <LI>単にマルチクラスでやったり、上から階層的に順番に分類していくのは、イマイチなので、一発でやるというのがかっこいいところ。
+        <LI><A href="http://citeseer.ist.psu.edu/herbster95tracking.html">エキスパートによる予測</A>っぽい枠組みをつかって面白い定式化をしている。 クラスが階層構造をもっていて、ノードがひとつのクラスに対応。
+        階層の各ノードに線形分類器をおく。 ただし、あるノードの分類器の重みは、親ノードにある分類器の重みと似ているという制約をいれる。
+        <LI>損失としては、予測されたラベルと真のラベルの、木の上での距離、これと重みの制約の和を最小化するオンライン学習アルゴリズム。
+        <LI>Yoram Singerは、今は、グー○ルにいるらしい。グー○ルは今回のICMLのスポンサーになっているが、
+        リクルーターをおくりこんでいるとのこと。
+      </UL>
+      <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/325.ps">サンプリングにバイアスのあるときの学習の話</A>
+      <UL>
+        <LI>ワトソンのひとで、あべさんの同僚。
+        <LI>データは必ずしも本来の分布に従ってサンプリングされない。 学者は、物理的に行きやすい場所の標本しかとれなかったり、ダイレクトメールを送る（＝サンプルをとる）人は、現在の分類器の性質に依存する。 その違いを推定して補正をする。
+      </UL>
+      <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/354.pdf">L1ノルム対L2ノルム</A>
+      <UL>
+        <LI>L1のほうが、データの次元に対し、本当の次元が小さいときに有効。 それは回転に対して不変でないから（要は軸の方向により大きくバイアスがかかる）。
+        <LI>sample complexityがデータの次元に対し対数オーダであることを証明。 実験的に確かめた。
+        <LI>L1のほうがスパースな解になるのは、みんな知ってることなのだろうけど、こういう視点はありそうで無かった気がする。
+      </UL>
+      <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/136.pdf">最小コストの決定木</A>
+      <UL>
+        <LI>誤分類コストだけでなく、属性をはかるコストがある場合の決定木学習。
+        <LI>学習は、単純に、まとめたコストを評価関数として使いながらスプリットしていく。
+        <LI>そもそも、属性ついたコストが、regularizationの効果があり、プルーニングの必要が無いところが面白い。
+      </UL>
+    </UL>
+    <LI>トイレ。前で手をふると手を拭く紙がにゅーとでてくる。 慣れるまでずいぶん手を振りまくった。<BR>
+    <IMG src="banff3.jpg" border="0" width="131" height="172">
+  </UL>
+  <LI>2004/7/6 <A href="http://www.aicml.cs.ualberta.ca/banff04/icml/pages/schedule.htm#Tuesday">３日目</A>
+  <UL>
+    <LI>聞いた話
+    <UL>
+      <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/presentations/Engle.pdf">ノーベル経済学賞のひと</A>の話
+      <UL>
+        <LI>ジャンルとしては時系列のひとのようだ。80年代に条件付の時系列モデルみたいなものを考えたらしい。
+        <LI>ARCH model：h<FONT size="-1">t</FONT> = w + Σ<FONT size="-1">j</FONT> α<FONT size="-1">j</FONT> (y<FONT size="-1">t-j</FONT> - m<FONT size="-1">t-j</FONT>)<FONT size="-1"><SUP>2</SUP></FONT> これに線形和の項 Σ<FONT size="-1">j</FONT> β<FONT size="-1">t-j</FONT> h<FONT size="-1">t-j</FONT>を加えたのがGARCH-modelというらしい。GARCH(1,1)は多くのfinancial assetsの良いモデルになっているらしい。へえー。
+        <LI>全体としては、さっぱりわからなかった。
+        <LI>偉いひとにもかかわらず、必要以上に丁重にあつかわないところは良いと思った。
+      </UL>
+      <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/364.ps">センサーネットワークで分散学習する問題</A>（なんとかペーパー）
+      <UL>
+        <LI>分散されたセンサーがデータを集めて、中央におくって予測するのではなく、センサーが予測し、その予測を集めて、それに基づいて最終的な予測を行う。
+        <LI>学習データは、全部そろっているとする。センサの予測する分布と、それを集めて予測するSVMを考え、損失を定義すると、センサのもつ分布と、SVMの重みのどちらかを固定すると、もう片方が凸になるので、順番に固定しながら局所解を発見する（最適解はそもそも無理）。
+        <LI>ちなみに、センサ予測→中央の予測、から、入力→中央の予測、に変換する際、marginalized
+        kernelが出てくる。
+        <LI>こういうセッティングの問題をちょっと考えていたので、ちょっと残念。
+        <LI>尚、今回、なんとかペーパーになってるやつは、確かに面白い。 よいものって、裾野が広いというか、そこに到達するための知識があまり無くても面白さを感じられるものなのだな、と思う。
+      </UL>
+      <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/55.pdf">カーネルCRF</A>
+      <UL>
+        <LI>個人的に今日の最大の関心事
+        <LI>CRFはカーネルで書ける。Representer theoremが成り立つ。つまり、<BR>
+        <I>Σ<FONT size="1">すべてのクリーク </FONT>Σ<FONT size="1">クリークへのすべてのラベル割り当て</FONT> α(ラベル割り当て)×カーネル</I><BR>
+        の形で書ける。
+        <LI>ただし、すべての割り当てが重みをもつので、ゲインを最大にする(クリーク＆ラベル割り当て)をグリーディに追加していくアプローチをとる。 クリークに対するラベル割り当ては素性に含まれる隠れ変数の数は固定しているので、数え上げられるとする。
+        <LI>ポスターのときに、張り付いてずっとおんなじようなことを質問してたら、ちょっといやそうだった。
+      </UL>
+      <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/331.pdf">CRFを高速学習の話</A>
+      <UL>
+        <LI>CRFの勾配を、gradient boostingで推定したregression treeかなにかで近似するらしい。
+        <LI>大御所Dietterichだが、彼はコンスタントに学生を送り込んでくるのみならず、自分も必ず出してくる。
+        かっこいい。
+        <LI>もちろん政治経済を行いながらなのは大変だろうけど、テクニカルな組織でリーダーとなる人はそうあるのが理想だなあ。
+      </UL>
+      <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/230.pdf">グラフィカルモデルの推論のサンプリングを早くするはなし</A>
+      <UL>
+        <LI>やっぱりイーワイのやってるのはいつも初めはさっぱりわからない。 でも、たいていあとで重要であるとわかる…。
+      </UL>
+    </UL>
+    <LI>会った人、できごと
+    <UL>
+      <LI><A href="http://www.cs.bris.ac.uk/%7Egaertner/index.html">ゲルトナ</A>と情報交換の集い
+      <UL>
+        <LI>その前にご飯を食べてたときに一緒にいた彼の元ボスのFlachは、鎧が似合いそう。
+        話し方も将軍みたいでちょっと怖い。
+        <LI>ゲルトナも<A href="http://www.acm.org/sigkdd/kdd2004/papers/index.html">KDD</A>に通しているらしい。 しかもグラフカーネルで。 今回のはグラフカーネルというよりは、グラフをサイクルと木に分解して、bag
+        of cycles &amp; treesのような表現にすると、グラフカーネルより性能は落ちるが、速くなります、という類の話らしい。
+      </UL>
+      <LI>荒井さん（京大）、やいりさん（東大）にあった。 最近は大学も変化しているようで、大変なこともいろいろありそうだ。
+    </UL>
+    <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/slides/ICML%2704%20Business%20Meeting%20-%20Short.pps">ICMLビジネスミーティング</A>
+    <UL>
+      <LI>今年、提出数がいくつで、どんな分布で、どれだけ通って、とか、お金をコレだけつかった、とかそういう報告と、今度どうやって行こう？みたいな話をする。
+      だれでも出られる。
+      <LI>毎年、伸び伸びになるくらい盛り上がるので結構楽しみ。 今年も、今年から試してみたdouble
+      blinded reviewの是非とかでずいぶん紛糾。
+      <LI>ちなみに今回のICML参加者は４１５人。 会議にかかった費用は２０００万円弱くらいらしい。
+      一番お金がかかるのがご飯、半分弱くらいいってるみたい。 確かに、ケーキがやたら種類が多くてふんだん。
+      <LI>今年の提出数は368、（最終的に）受理されたのは118。 採択率32%くらい。
+      <LI>カーネル（２０）＋SVM（１５）で３５本、あわせるとコレが一番多い。
+      <LI>分野ごとの受理率の統計もでていた。 カーネルは結構高い。やはり分野もちゃんと選ぶのが重要。
+    </UL>
+    <LI>迷い馬の張り紙。ありえない。<BR>
+    <IMG src="banff4.jpg" border="0" width="183" height="221">
+  </UL>
+</UL>
+<UL>
+  <LI>2004/7/7 <A href="http://www.aicml.cs.ualberta.ca/banff04/icml/pages/schedule.htm#Wednesday">４日目</A>（自分的最終日）
+  <UL>
+    <LI>最終日、明日はワークショップだけど、それには出ずに帰国。 さすがに電池切れそうだったけど、ポスターに最後の力を振り絞って参加
+    <LI>聞いた話
+    <UL>
+      <LI>Invited Talk: <A href="http://www.eecs.berkeley.edu/%7Egene/">Gene Myers</A>
+      <UL>
+        <LI>彼がセレラでやった、シークエンシングの話にはじまり、ゲノム比較による遺伝子発見、最後にシステムバイオロジーの話に発展した。
+        <LI>「Sequencing By Hybiridizationってどうなん？」って聞かれて「役に立たない」って切り捨ててた。
+      </UL>
+      <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/91.pdf">SVDを速くする話</A>（なんとかペーパー）
+      <UL>
+        <LI>速くなるだけじゃなくて領域も減る。 密な行列OK。
+      </UL>
+      <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/103.pdf">２次構造をグラフィカルモデルで予測する話</A>
+      <UL>
+        <LI>配列をセグメントするために、まず、セグメントを生成して、そのセグメントが配列を生成するような生成モデルを考える。
+        <LI>いまやりたいことに似ている。
+      </UL>
+      <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/348.pdf">ガウシアンプロセスで配列ラベリング（GPSC）</A>
+      <UL>
+        <LI>アルたんを捕まえた！（発表に使った資料を送ってもらうのを約束。満足。）
+        <LI>雰囲気としては、kernel CRFは損失を、<BR>
+        <I>尤度(exp(線形和)) + uniform prior</I><BR>
+        と仮定すると、representer theoremが成立する、つまりカーネル化される。 同様に、GPSCは、損失を、<BR>
+        <I>尤度(任意の関数) + Gaussian prior</I><BR>
+        を仮定するとrepresenter theoremが成立する。
+      </UL>
+      <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/350.pdf">モーメントカーネル</A>
+      <UL>
+        <LI><A href="http://jmlr.csail.mit.edu/papers/v5/cortes04a.html">Rational Kernel</A>でやってた確率オートマトン同士のカーネルを、モーメント計算に拡張。
+        <LI>これによってサブストリングの出現回数の期待値ではなく２乗とか３乗とかのモーメントが計算可能。
+        <LI>これもグラフカーネルに関係しそうなのでわからないといけないが、いまのところわからない。
+        <LI>著者のひとりのCortes（ちなみに彼女はVapnikとともにSVMをつくった人）は、Googleに行ったらしい。
+        なんかAT&amp;Tの受け皿になってる…。
+      </UL>
+      <LI>荒井さんにRelational Reinforcement Learningの話を聞いた。
+      <UL>
+        <LI>想像してたように、状態表現とかが１階述語論理で記述されるらしい。
+        <LI>つまり、状態がグラフで書けるということで、グラフ→アクション→グラフという感じかなあ…。
+        <LI>カーネルをつかったりできるわけだ。RRLに使えるんじゃないかな？（←どうやらゲルトナが去年やってたのはコレらしい…）
+      </UL>
+    </UL>
+    <LI>感想
+    <UL>
+      <LI>今年のICMLはここ３年では一番面白かった気がする。
+      <LI>なかなか会場でグリーディに活動するのは難しいが、それでも3回目になると、ほんのちょっとだけど、通りが良くなって居心地がよくなる。
+      いろいろやりたいことの方針もできた。
+      <LI>さて、こうして数日間アカデミックな世界にどっぶりつかってみると、正気にかえる（あるいは逆に洗脳される）。
+      <LI>explicitにしろimplicitにしろ、トップダウンな価値観が与えられる企業においては、その価値観に共感できない＝劣っているという感覚が大なり小なりある。
+      それは研究所であっても、そうだと思う。 そしてそれは理屈としては、それは正しいと思うし、そうでない企業の研究所は健全ではないと思う。
+      
+      <LI>ただ、ずっとそこにつかっていると、その価値観がいくつかあるうちのひとつであることを忘れてしまう。
+      というか、他にも価値観があることは頭で知ってるんだけど、つい、それが正しいと信じてしまう。
+      <LI>たまに、実家に帰って他の道を行っている人と話をしたり、こういう感じでアカデミズムに触れる（触れすぎると今度はこっちの価値観に染まってしまい、これはこれで極端）のはそれをリセットする意味で重要であるとおもう。（ただし、価値観とかのまえに、これをやらないとご飯が食べられない！という切羽詰った状態でリセットするのは避けたい）
+      <LI>僕は会社の、とある制度（ある種の歪み？）を利用して会議に参加しているわけだが、テーマなんてなんでもいいから、論文通して毎年来たいとおもう。ICMLの難しさは、ちょうど良いとおもうので、そのくらいのクオリティを保っていこう、というちょうどいい目標だと思うし。（KDDになってしまうと、なんだか故郷に錦を飾るくらいの心持ちで苦しい。）
+    </UL>
+    <LI>困っていること
+    <UL>
+      <LI>帰りのバスにどこで乗るのかわからない(←どうやら、ホテルの前にきてくれるようだ)
+    </UL>
+    <LI>やいりさんとちょっとだけ河を散歩<BR>
+    <IMG src="banff5.jpg" border="0" width="180" height="243">
+  </UL>
+  
+  <LI>2004/7/8 <A href="http://www.aicml.cs.ualberta.ca/banff04/icml/pages/schedule.htm#Thursday">帰りの日</A>。
+  <UL>
+    <LI>ワークショップには出ずに帰国。朝ごはんだけ会場で食べる。
+    <LI>帰りのバスでKernelCRFの女の子と一緒だった。 どうやらホテルが同じだったらしい。
+    バスで話をする。 発表につかった資料をもらうのを約束。
+    <LI>バンクーバーからの飛行機の出発時間が遅れる。そのおかげかどうか、やたらイイ席。
+    途中で、雲の中から山脈が出てる（どこかはわからないけど、ロシアとアメリカのつなぎ目みたいなとこ？）のをみんなで見て機内一時大はしゃぎ。
+    <LI><A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/348.pdf">GPSC</A>再考。
+    <UL>
+      <LI>やはりGPはなんのことやら不明、なので、途中の過程は無視して、出てきたものだけを見ることにする。
+      <LI>CRFとの違いは、CRFがパラメータのuniform priorを仮定しているのに対し、パラメータのGaussian
+      priorを仮定して、MAP推定しているらしい。
+      <LI>効率的なアルゴリズムとして提案しているのは、結局のところ
+      <UL>
+        <LI>y<FONT size="-2">t</FONT>-y<FONT size="-2">t+1</FONT>featureについてはprimal表現、x<FONT size="-2">t</FONT>-y<FONT size="-2">t</FONT>featureについてはdual表現をしている（というかx<FONT size="-2">t</FONT>についてはカーネル行列を持つ）のに等価
+        <LI>例をひとつひとつ処理する(stochastic gradient descentっていうんだっけ？)
+      </UL>
+      にすぎない気がする。
+      <LI>KernelCRFの方は、クリーク選択のヒューリスティクスを考えました、という新規性がある気がするけど、こっちの解き方はあたりまえの気がするなあ…、
+    </UL>
+    <LI>むしろ、実は面白そうなのは、<A href="http://www.aicml.cs.ualberta.ca/_banff04/icml/pages/papers/76.pdf">HMSVMの続き</A>のほうだった。
+    <UL>
+      <LI>正しい出力と誤った出力の間の損失Δを適当に定義してやると、２次計画のsoft
+      marginの制約のところ(≧1-ξ)を≧1-ξ/Δにすればよいらしいのだ
+      <LI>これは、最近ちょっと考えてた枠組みを(discriminativeなケースにおいて)ある意味含まれちゃってる…。
+    </UL>
+  </UL>
+</UL>
+</BODY>
+</HTML>
