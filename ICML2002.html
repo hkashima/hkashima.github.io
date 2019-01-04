@@ -1,0 +1,210 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<META http-equiv="Content-Style-Type" content="text/css">
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+<P><FONT size="+3"><B>ICML-2002参加報告</B></FONT></P>
+<P><I><FONT size="+1">この文は、全くcomprehensiveではありません</FONT></I><BR>
+<BR>
+7/8-7/12に機械学習関連の国際会議19th International Conference on Machine
+Learning（ICML）に発表にいってきました。今年はシドニーのUniversity of New
+South Wales（決定木C4.5で有名なRoss Quinlanとかがいる）で開催されました。オーストラリアは冬で、日本での10月くらいの寒さでした。<BR>
+<IMG src="image.gif" border="0" width="276" height="222"><B><FONT size="+1"><BR>
+<BR>
+会議（19th International Conference on Machine Learning）について</FONT></B></P>
+<UL>
+  <LI>IJCAI/AAAIはもっと広範にAIを語る会議であるのに対しICMLは機械学習に特化した会議で、機械学習の会議としては最大のものであると思います。理論から応用までカバーしていますが、応用といっても、ナントカシステム、というようなものは殆どありません。
+
+  <LI>採択率は86/261（ちょうど3倍くらい） 
+  <LI>ACM COLT (Computational Learning Theory：完全に理論寄り), ILP (Inductive Logic Programming：ただし今年はあまりILPっぽくなかったらしい) と纏めて開催 
+  <LI>全体的な傾向としては、
+  <UL>
+    <LI>強化学習が3分の1を占め、かなり流行っている。ただし、結構理論寄り。現実的な問題への応用はまだ微妙な感じ。
+    <UL>
+      <LI>unlabelled dataとかsemi-supervisedなどのキーワードが多くみられ、教師あり学習におけるラベルつきデータ獲得のコストの問題（自然言語処理や生物学のデータ解析などにも現れる）、クラスタリングに教示を入れる（人間の知識をいれる）など、教師ありと教師なしの間くらいのセッティングの問題が多く見られた。 
+      <LI>いわゆる普通の教師あり学習のなかでのホットトピックは、カーネル法、SVMなどで、SVMのセッションが設けられた。特にカーネル部分の設計に注目している研究としては、私の発表を含め数件あった。今回ブースティングはあまり見られなかった
+      <LI>対象をテキストデータにしているものが多かった。ゲノム関連はキーワードとしてあげる人は多かったが、実際に解析を行った人は殆どいなかった。おそらくその場合、別のところ（ISMBとか）に出すのでしょう。 
+    </UL>
+  </UL>
+</UL>
+<P><B><FONT size="+1">ほかの人の研究について（SVM, カーネル）</FONT></B></P>
+<UL>
+  <LI>[COLT]Path Kernels and Multiplicative Updates (Eiji Takimoto and Manfred Warmuth)
+  <UL>
+    <LI>勾配方向にパラメータを更新していく方法としては、従来の加法型（perceptron等）ではなくweighted majority等の乗算型のアルゴリズムが提案されているが、この乗算型のアルゴリズムにおいてカーネルを用いることのできる問題のクラスを示した。 
+    <LI>有向グラフの辺の重みが、ひとつの入力変数に対応し、特徴空間の一属性がそこでのパス、そしてそのパスの受けるロスがパスを構成する全ての辺のそれぞれが受けるロスの積で定義されるような、そのようなグラフで問題を記述できるとき、乗算型の学習アルゴリズムが適用できる 
+    <LI>重要な例としては多項式カーネル。特徴空間の次元数に対し実際に分類に寄与する次元数が少ない場合は乗算型は速い。テキスト分類等に有効かもしれない。 
+  </UL>
+  <LI>[COLT]A Second-Order Perceptron Algorithm (Nicol? Cesa-Bianchi, Alex Conconi and Claudio Gentile)
+  <UL>
+    <LI>データのcorrelation matrixを単位ベクトルになるように変換するようなオンラインパーセプトロンアルゴリズムの提案とmistake boundの解析 
+    <LI>分類面の法線ベクトルがデータの小さい固有値をもつ固有ベクトルのときに、性能がよい 
+    <LI>従来のパーセプトロンとの折り合いのパラメータを自動的に調節する 
+    <LI>dual formで書けるので、カーネル化も自明でできる 
+  </UL>
+  <LI>Syllables and other String Kernel Extensions (Craig Saunders, Hauke Tschach and John Shawe-Taylor)
+  <UL>
+    <LI>ストリングカーネルを少し拡張
+    
+    <LI>シンボルごとに文字挿入の減衰率λの値をかえる 
+    <LI>文をシンボル単位ではなく、syllableに切って配列長を短くする computer -&gt; com-put-er 
+    <LI>シンボル間の類似度をいれる（exact match以外も考慮）－これは私の提案手法と本質的に同じです 
+    <LI>テクニカルにはどうでもいいことですが、実際にテキストの問題を扱う際に有効とおもわれる考察がされてる気がします。でもTFIDFにはなかなか勝てない。 
+    <LI>ストリングカーネルを情報抽出につかうのはいいかも 
+  </UL>
+  <LI>Multi-Instance Kernels (Thomas Gaertner, Peter Flach, Adam Kowalczyk, Alex Smola and Robert Williamson)
+  <UL>
+    <LI>Multi Instanceの問題は、正例の与えられ方が「これらの例の中に正例があります」という形で例の集合に対してラベルが与えられる。そんな場合にカーネルを拡張 
+    <LI>例えば、ある化学物質のとりうるいくつかのconformationのうち、活性のあるのはあるひとつのconformationで、実験で、どのconformationが活性があったのかは分からないがとにかくこの物質は、ある状態のときに活性がある、という形で例が与えられる場合があるらしい 
+  </UL>
+  <LI>Anytime Interval-Valued Outputs for Kernel Machines: Fast Support Vector Machine Classification via Distance Geometry (Dennis DeCoste)
+  <UL>
+    <LI>L個のサポートベクトルをもつ分類器が、M個の新しい例を分類するときの計算量はNMに比例するが、これを減らす 
+    <LI>サポートベクタマシンの分類は、テストデータと正例の重みつき重心および負例の重みつき重心それぞれとの距離によって決まるが、この計算をK(&lt;L)個のサポートベクトルを使って近似的に計算する 
+    <LI>その上界と下界を評価することで、分類がL個全てのサポートベクトルをつかったものと同じになることを保証 
+    <LI>K個のベクトルは、K-1次元のユークリッド空間にincrementalに埋め込める 
+  </UL>
+  <LI>The Perceptron Algorithm with Uneven Margins (Yaoyong Li, Hugo Zaragoza, Ralf Herbrich, John Shawe-Taylor and Jaz Kandola)
+  <UL>
+    <LI>SVM（マージン最大化にもとづく）は2次計画になって重いので、従来のPerceptron（2乗誤差最小化）のようなオンライン学習的に学習をしたい。
+    
+    <LI>パーセプトロンをマージン最大化用に修正したアルゴリズムがいくつかあるが正例と負例の重要度が異なる場合にアルゴリズムを拡張
+    
+    <LI>収束定理と、最大マージンとの誤差に関する定理を、この場合に適用できるよう修正 
+  </UL>
+  <LI>Learning the Kernel Matrix with Semi-Definite Programming (Gert Lanckriet, Nello Christianini, Peter Bartlett, Laurent El Ghaoui and Michael Jordan)
+  <UL>
+    <LI>カーネル行列「を」学習する問題。いくつかのカーネル行列があるときに、その最適なmixtureを学習する。 
+    <LI>目的関数はkernel alignment(カーネルとラベルの整合性)やmargin（SVMなどの目的関数）、カーネル行列は半正定なので、SDPで書ける 
+    <LI>バイオ系のデータで、マイクロアレイ、配列などの各種情報源からつくられたカーネル行列を組み合わせて予測するのによいのではないか 
+  </UL>
+  <LI>Diffusion Kernels on Graphs and Other Discrete Structures (Risi Kondor and John Lafferty)
+  <UL>
+    <LI>入力空間がグラフで表現されており、グラフ構造（隣り合う点間に辺）の上での拡散という概念を用いグラフ上の点と点のカーネルを定義 
+    <LI>カーネルはexp(aH)(aは拡散具合のパラメータ、Hがノード間の重み）の形で書け、その計算はHの対角化に帰着される 
+    <LI>対角化は重いが、いくつかの特別な場合に対して、簡単に計算できる例が与えられた。例として、ブール関数のカーネル。普通、ブール関数の入力空間をまじめに考えると、指数個のノードをもつグラフになるが、簡単に計算できる。 
+    <LI>グラフとグラフのカーネルではないので、直接グラフ構造の分類に適用できるわけではないが、同じような形でグラフとグラフのカーネルも定義でき、対角化に持っていくことが出来そうな気がする。前に猪口さんと分子構造の分類（グラフの分類）を同じようなやりかたで少しやってみていたのですが、もう一回掘り起こしてみて、対応付けとかできるかも、と思いました。 
+  </UL>
+</UL>
+<P><B><FONT size="+1">ほかの人の研究について(そのほか</FONT></B>)</P>
+<UL>
+  <LI>[COLT]Polynomial Time Inductive Inference of Ordered Tree Patterns with Internal Structured Variables from Positive Data
+  <UL>
+    <LI>Yusuke Suzuki, Ryuta Akanuma, Takayoshi Shoudai, Tetsuhiro Miyahara and Tomoyuki Uchida 
+    <LI>ある木パタン＝変数のところには任意の木を代入できるようなパタン（パタン言語の木版のようなもの）で変数は全て異なる、を仮説として用い、その正例からの学習可能性を証明 
+    <LI>例のメンバシップを多項式時間でチェックすることをいうぶぶんが、変数のある木のパタンマッチングのような問題になる 
+    <LI>私の論文と、似たような雰囲気がある（DPを使った木の比較）ので、参考になるかもしれない
+    
+  </UL>
+  <LI>Learning word normalization using word suffix and context from unlabeled data　（Dunja Mladenic）
+  <UL>
+    <LI>（ラベルなしデータももちいて）word stemmingのようなことをしたい（どの変形ルールを施すべきかを当てる）。北欧の方の言葉を対象にしていました。 
+    <LI>単語の長さ５のsuffixから当てる分類器と、文脈から当てる（naive Bayes）分類器がco-trainingでお互いにラベルを付け合う 
+    <LI>面白い問題だとおもいました。使うルール集合は与えられていて、その中から選ぶ問題、ではなく、書き換えの学習とかだと（問題としては）もっと面白いのかな、などと思いました。 
+  </UL>
+  <LI>Partially Supervised Classification of Text Documents (Bing Liu, Wee Sun Lee, Philip S. Yu and Xiaoli Li)
+  <UL>
+    <LI>正例の集合Pと、よくわからない集合Uがあたえられるような問題（ICMLのproceedings（全部機械学習）を与えられて、IJCAI/AAAI（人工知能）のproceedingsから機械学習の物だけを取り出す） 
+    <LI>基本的にはEMもどきで、とりあえずUを負例だとおもってnaive Bayesで学習しておいて、Uを分類してみて、（負例である）信頼度の高いものを負例にして、残りをPにいれて、、を繰り返す 
+    <LI>その閾値をきめるのに、Pのなかからいくつかラベルを隠してUに（スパイとして）潜ませておいて、分類においてその振る舞いをみながら閾値を切る 
+  </UL>
+  <LI>A Boosted Maximum Entropy Model for Learning Text Chunking　(Seong-Bae Park and Byoung-Tak Zhang)
+  <UL>
+    <LI>chunkingの問題（いくつかの単語を纏めて名詞句とかをつくる）は教師ありの問題として定式化できるが、これに対してboosting+Maximum entropy 
+    <LI>例の数を少なくするためにactive learningにする 
+    <LI>まず決定木をつくって、そこからmaximum entropyの素性を自動生成する 
+    <LI>ラベルの偏りに対処するためにブースティングという理屈はよく分からなかった。 
+  </UL>
+  <LI>An Alternate Objective Function for Markovian Fields　（Sham Kakade, Yee Whye Teh and Sam Roweis）
+  <UL>
+    <LI>HMMとか、MRFとかの確率モデルを（隠れ変数の値を当てるために）学習する問題では、観測された例に対するjoint distributionの尤度を目的関数として最大化するようにする（隠れ変数同士の整合性を考慮する）が、隠れ変数を当てるという目的のもとではmarginal distributionの尤度を目的関数として用いるべきである（隠れ変数同士の整合性はおいといて、とにかく正解数を多くする） 
+    <LI>パラメータの学習は観測されなかった配列も考慮して行わなければならないが、うまくDPで畳み込む 
+    <LI>問題は、（観測された）配列にタグ（隠れ変数）をつけていく問題で、named entityなどの問題に通じる。そして、やりかたも面白い 
+  </UL>
+  <LI>Pruning Improves Heuristic Search for Cost-Sensitive Learning　(Valentina Bayer Zubek and Thomas Dietterich)
+  <UL>
+    <LI>決定木の問題だが、予測誤りのコストだけでなく、属性を計るコストも考慮するような問題（血液検査が安いが、DNAチップは高い） 
+    <LI>基本的には全決定木中の探索を行うが、2種類の枝刈りヒューリスティクスを用いる 
+    <LI>間違えて良いものを刈らない（AO*サーチ） 
+    <LI>データに対して同じ統計的振る舞いをする二つの木の片方をすてる（statistical pruning） 
+    <LI>面白い問題だと思う。もう少し限定された問題で、美しい解き方が考えられたら良いと思う。 
+  </UL>
+  <LI>Semi-supervised Clustering by Seeding (Sugato Basu, Arindam Banerjee and Raymond Mooney)
+  <UL>
+    <LI>基本的にはK-means、それに対して各クラスタに属するべきいくつかのデータ（シード）を事前知識としていれる方法を比較 
+    <LI>シードの属するクラスタがクラスタリングの過程で変わっていいタイプと、初めにいったん割り当てられたクラスタをクラスタリングの過程で変更しないタイプの2種類を提案 
+    <LI>must-linkとcannot-linkによって事前知識を与える既存のアルゴリズムと比較して良好な性能 
+  </UL>
+  <LI>Relations Among Concepts to Acquire Weakly Labeled Training Data (Joseph Bockhorst and Mark Craven)
+  <UL>
+    <LI>関連のある複数のタスクに対する予測器がお互いにラベルなしデータの（弱い）ラベルを付け合う(co-trainingのように) 
+    <LI>ここではオペロン（纏めて転写される連続した遺伝子）と、転写のターミネーターをあてるという二つのタスクを行った 
+    <LI>オペロンの終わりにターミネーターがある、といった知識を使ってお互いにラベルを付け合う 
+    <LI>ラベルつきデータが少ないときには有効らしい 
+  </UL>
+  <LI>Interpreting and Extending Classical Agglomerative Clustering Algorithms using a Model-Based approach　（Sepandar Kamvar, Dan Klein and Christopher Manning)
+  <UL>
+    <LI>階層的にまとめていくタイプのクラスタリングが、そのまとめ方の基準によって、それぞれある確率モデルの最尤推定をグリーディに行っているのに相当することを示した 
+  </UL>
+  <LI>Feature Selection with Active Learning　(Huan Liu, Hiroshi Motoda and Lei Yu)
+  <UL>
+    <LI>属性選択アルゴリズムRELIEFにおいて、例をサンプリングするのを、一様にとってくる。
+    
+    <LI>中央値で分けたk-d treeを使って実装 
+  </UL>
+  <LI>Finding an Optimal Gain-Ratio Subset-Split Test for a Set-Valued Attribute in Decision Tree Induction (Fumio Takechi and Einoshin Suzuki)
+  <UL>
+    <LI>集合属性とは{f1,f2,f3}のような要素をもつ属性においてそのサブセットを値としてもつことのできる属性、つまり、その属性のとりうる値Fとして{},{f1},{f2},{f3},{f1,f2},{f1,f3},{f2,f3},{f1,f2,f3}が許される。決定木のノードテストは、「Fはf1,f2を含むか？」みたいにかける。 
+    <LI>こういう場合の決定木の学習で、どのテストで分岐するかを決めるのは当然NP困難だけど、この研究では、分岐の基準につかう利得、利得比の上界を示し、これを使って枝刈りしながら探索。 
+  </UL>
+  <LI>Content-Based Image Retrieval Using Multiple-Instance Learning (Qi Zhang, Wei Yu, Sally Goldman and Jason Fritts)
+  <UL>
+    <LI>山の絵とそうでない絵を分類したりする 
+    <LI>山の絵の中で実際に山である領域は絵を分割したうちの一部分、よってこれをMulti-instanceの問題としてとく 
+    <LI>問題の定式化のしかたが、なるほどという感じ。 
+  </UL>
+</UL>
+<P><B><FONT size="+1">自分の発表について</FONT></B><FONT size="+1">(Kernels for Semi-structured data)</FONT></P>
+<UL>
+  <LI>30分の発表＋ポスターセッション
+  <LI>内容は、ラベルつき順序木のあつかうような学習を（カーネル法と呼ばれる学習アルゴリズムのクラスによって）行うために、木と木の間の類似度（各部分木の出現数を一つの次元とするような特徴空間を設計し、そこでの内積）を計算する方法を提案するというようなもので、HTMLデータの分類実験や、情報抽出実験などを行いました。
+  <LI>概ね良好に終了しました。とりあえず質問の中身を勝手に解釈して、とにかく答える、という戦略。司会のひとが、聴くときはしかめっ面できいていたので、怖かったのですが、質問の時には「こいつはこんなことをいってるんだ」みたいな感じで結構助けてくれた。 
+  <LI>コメント（オンライン・オフライン）
+  <UL>
+    <LI>そのカーネルはMercer Kernel　（feature spaceが存在する）になっているか
+    <UL>
+      <LI>← 明示的にfeature spaceを設計しているので、なってるはずです（それでも俺には疑わしい、と言われた。あとでよく考えてみると、絶対なっているはずなので、すこし悔しい。） 
+    </UL>
+    <LI>木のマッチングの論文をぜんぜんひいてないけど、そっちにはいろいろアルゴリズムがあるので、そっちをみてみたらどうか
+    <UL>
+      <LI>← ごもっともです。いまそういう枠組みで言い直そうとしています。 
+    </UL>
+    <LI>情報抽出実験の精度の測り方がわからない
+    <UL>
+      <LI>← 説明に苦労しました。分かった人がstep by stepで助けてくれました。「なんとかが何個でナントカが何個で、じゃあ、当たりはいくつだ？」みたいに。 
+    </UL>
+    <LI>HTMLからどうやって実際に木構造を作ったのか？
+    <UL>
+      <LI>← 相方がやってくれたので良くわかりません。私のプログラムは独自のフォーマットしか受け付けません。それを作るのにたしかHTMLのパーザーとかなんとかいってたような、、、 
+    </UL>
+    <LI>わざわざ面白いといってくれたひとは、５人くらいで、SVM屋よりも、ほかの人に受けたようであった 
+  </UL>
+</UL>
+<P><B><FONT size="+1">感想</FONT></B></P>
+<UL>
+  <LI>毎年そうですが、面白いものと、なんでこんなのが、、、みたいなものが入り混じっていて、ムラがある感じでした（そこに私は滑り込んだ）。
+  <LI>やはり英語は大切だとおもいました。なによりも聞こえないと話にならない。（にわかにノバ熱が高まりました） 
+  <LI>ホテルにカジノが付いていました。いきませんでしたが。 
+  <LI>最後の日に動物園にいった以外はほとんど遊びませんでしたが、私は引き篭りで、あまり旅行に興味はないので丁度よかったです。
+  
+  <LI>再会（YeeWhye）
+  <UL>
+    <LI>昔、トロントに行ったとき、友人の友人Yee Whye宅に一晩とめてもらったのですが、そのときの人が発表に来ていて劇的再会しました。とめてもらったときに部屋に人工知能の本があったので、そういうひとなのかなとはおもってたけど、驚きました。
+  </UL>
+  <IMG src="image2.gif" border="0" width="296" height="161">
+</UL>
+</BODY>
+</HTML>
