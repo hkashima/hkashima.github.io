@@ -1,13 +1,21 @@
-1975”N¶‚Ü‚êD
-1997”N‹“s‘åŠwHŠw•””—HŠw‰È‘²‹ÆD
-1999”N‹“s‘åŠw‘åŠw‰@HŠwŒ¤‹†‰È‰—pƒVƒXƒeƒ€‰ÈŠwêUCm‰Û’öC—¹D
-2007”N‹“s‘åŠw‘åŠw‰@î•ñŠwŒ¤‹†‰È’m”\î•ñŠwêU”m‰Û’öC—¹D”miî•ñŠwj
-1999”N‚©‚ç2009”N‚Ü‚ÅIBM “Œ‹Šî‘bŒ¤‹†Š‹Î–±D
-2009”N‚æ‚è“Œ‹‘åŠw‘åŠw‰@î•ñ—HŠwŒnŒ¤‹†‰È”—î•ñŠwêUy‹³öD
-2014”N‚æ‚è‹“s‘åŠw‘åŠw‰@î•ñŠwŒ¤‹†‰È’m”\î•ñŠwêU‹³öD
-2016”N‚æ‚è—‰»ŠwŒ¤‹†Š ŠvV’m”\“‡Œ¤‹†ƒZƒ“ƒ^[ ƒqƒ…[ƒ}ƒ“ƒRƒ“ƒsƒ…ƒe[ƒVƒ‡ƒ“ƒ`[ƒ€ ƒ`[ƒ€ƒŠ[ƒ_[iŒ“”Cj 
-lH’m”\C“Á‚É‹@ŠBŠwKCƒf[ƒ^ƒ}ƒCƒjƒ“ƒO“™‚Ìƒf[ƒ^‰ğÍ‹Zp‚ÌŒ¤‹†ŠJ”­‚Æ‚»‚ÌÀĞ‰ï‰—p‚É]–D
-2009”Nî•ñˆ—Šw‰ï ’·”ö^‹L”O“Á•ÊÜC2012”Nƒ}ƒCƒNƒƒ\ƒtƒgƒŠƒT[ƒ`“ú–{î•ñŠwŒ¤‹†ÜC2013”N‘Dˆäî•ñ‰ÈŠwU‹»à’c ‘DˆäŠwpÜC2019”N “ú–{ŠwpU‹»‰ïÜ “™‚ğóÜD
-‚»‚Ì‘¼‹ÆÑ“™‚Í https://bit.ly/2W5tDSH ‚ğQÆD
+1999å¹´ äº¬éƒ½å¤§å­¦ ä¿®å£«èª²ç¨‹ã‚’ä¿®äº†ã®ã®ã¡ã€æ—¥æœ¬ã‚¢ã‚¤ãƒ»ãƒ“ãƒ¼ãƒ»ã‚¨ãƒ æ ªå¼ä¼šç¤¾ã«å…¥ç¤¾.
+æ¥­å‹™ã®å‚ã‚‰ã€2007å¹´ã«åŒå¤§å­¦ åšå£«èª²ç¨‹ã‚’ä¿®äº†ã—ã€åšå£«ï¼ˆæƒ…å ±å­¦ï¼‰ã®å­¦ä½ã‚’å–å¾—ï¼
+2009å¹´ã‚ˆã‚Šæ±äº¬å¤§å­¦ å‡†æ•™æˆã‚’çµŒã¦ã€2014å¹´ã‚ˆã‚Šäº¬éƒ½å¤§å­¦ æ•™æˆï¼
+2016å¹´ã‚ˆã‚Šç†åŒ–å­¦ç ”ç©¶æ‰€ ãƒãƒ¼ãƒ ãƒªãƒ¼ãƒ€ãƒ¼ã‚’å…¼ä»»ï¼
+äººå·¥çŸ¥èƒ½ã‚„ãã®åŸºç¤æŠ€è¡“ã§ã‚ã‚‹æ©Ÿæ¢°å­¦ç¿’ã®ç ”ç©¶é–‹ç™ºã¨ãã®å®Ÿç¤¾ä¼šå¿œç”¨ã«å¾“äº‹ï¼
+æ—¥æœ¬å­¦è¡“æŒ¯èˆˆä¼šè³(2019)ç­‰ã®å—è³å¤šæ•°ï¼
 
-Hisashi Kashima is a professor at Department of Intelligence Science and Technology, Kyoto University. Before joining the faculty, he was a research staff member of Data Analytics Group at Tokyo Research Laboratory of IBM Research during April, 1999-July, 2009, and was an associate professor at Department of Mathematical Informatics, The University of Tokyo during August, 2009-March, 2014. His research focuses on foundations of machine learning and data mining, and on their applications in various fields, including marketing, bio-/chemo-informatics, and industrial/business intelligence. His previous research work includes development of kernel methods for structured data, such as trees and graphs, predictive modeling of networks, including biological and social networks, and anomaly detection for industrial systems, and those contributions were awarded by academic societies. He also contributes to business based on machine learning techniques, and to a number of issued and disclosed patents. He obtained his B.S. degree in applied mathematics and physics in 1997, and an M.S. degree in systems engineering in 1999, and a Ph.D. degree in informatics in 2007 from Kyoto University in Japan. For more details, refer to https://bit.ly/2W5tDSH.
+
+1975å¹´ç”Ÿã¾ã‚Œï¼
+1997å¹´äº¬éƒ½å¤§å­¦å·¥å­¦éƒ¨æ•°ç†å·¥å­¦ç§‘å’æ¥­ï¼
+1999å¹´äº¬éƒ½å¤§å­¦å¤§å­¦é™¢å·¥å­¦ç ”ç©¶ç§‘å¿œç”¨ã‚·ã‚¹ãƒ†ãƒ ç§‘å­¦å°‚æ”»ä¿®å£«èª²ç¨‹ä¿®äº†ï¼
+2007å¹´äº¬éƒ½å¤§å­¦å¤§å­¦é™¢æƒ…å ±å­¦ç ”ç©¶ç§‘çŸ¥èƒ½æƒ…å ±å­¦å°‚æ”»åšå£«èª²ç¨‹ä¿®äº†ï¼åšå£«ï¼ˆæƒ…å ±å­¦ï¼‰
+1999å¹´ã‹ã‚‰2009å¹´ã¾ã§IBM æ±äº¬åŸºç¤ç ”ç©¶æ‰€å‹¤å‹™ï¼
+2009å¹´ã‚ˆã‚Šæ±äº¬å¤§å­¦å¤§å­¦é™¢æƒ…å ±ç†å·¥å­¦ç³»ç ”ç©¶ç§‘æ•°ç†æƒ…å ±å­¦å°‚æ”»å‡†æ•™æˆï¼
+2014å¹´ã‚ˆã‚Šäº¬éƒ½å¤§å­¦å¤§å­¦é™¢æƒ…å ±å­¦ç ”ç©¶ç§‘çŸ¥èƒ½æƒ…å ±å­¦å°‚æ”»æ•™æˆï¼
+2016å¹´ã‚ˆã‚Šç†åŒ–å­¦ç ”ç©¶æ‰€ é©æ–°çŸ¥èƒ½çµ±åˆç ”ç©¶ã‚»ãƒ³ã‚¿ãƒ¼ ãƒ’ãƒ¥ãƒ¼ãƒãƒ³ã‚³ãƒ³ãƒ”ãƒ¥ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ãƒãƒ¼ãƒ  ãƒãƒ¼ãƒ ãƒªãƒ¼ãƒ€ãƒ¼ï¼ˆå…¼ä»»ï¼‰ï¼
+äººå·¥çŸ¥èƒ½ï¼Œç‰¹ã«æ©Ÿæ¢°å­¦ç¿’ï¼Œãƒ‡ãƒ¼ã‚¿ãƒã‚¤ãƒ‹ãƒ³ã‚°ç­‰ã®ãƒ‡ãƒ¼ã‚¿è§£ææŠ€è¡“ã®ç ”ç©¶é–‹ç™ºã¨ãã®å®Ÿç¤¾ä¼šå¿œç”¨ã«å¾“äº‹ï¼
+2009å¹´æƒ…å ±å‡¦ç†å­¦ä¼š é•·å°¾çœŸè¨˜å¿µç‰¹åˆ¥è³ï¼Œ2012å¹´ãƒã‚¤ã‚¯ãƒ­ã‚½ãƒ•ãƒˆãƒªã‚µãƒ¼ãƒæ—¥æœ¬æƒ…å ±å­¦ç ”ç©¶è³ï¼Œ2013å¹´èˆ¹äº•æƒ…å ±ç§‘å­¦æŒ¯èˆˆè²¡å›£ èˆ¹äº•å­¦è¡“è³ï¼Œ2019å¹´ æ—¥æœ¬å­¦è¡“æŒ¯èˆˆä¼šè³ ç­‰ã‚’å—è³ï¼
+ãã®ä»–æ¥­ç¸¾ç­‰ã¯ <a href="https://hkashima.github.io/publications.html>"https://hkashima.github.io/publications.html</a> ã‚’å‚ç…§ï¼
+
+Hisashi Kashima is a professor at Department of Intelligence Science and Technology, Kyoto University. Before joining the faculty, he was a research staff member of Data Analytics Group at Tokyo Research Laboratory of IBM Research during April, 1999-July, 2009, and was an associate professor at Department of Mathematical Informatics, The University of Tokyo during August, 2009-March, 2014. His research focuses on foundations of machine learning and data mining, and on their applications in various fields, including marketing, bio-/chemo-informatics, and industrial/business intelligence. His previous research work includes development of kernel methods for structured data, such as trees and graphs, predictive modeling of networks, including biological and social networks, and anomaly detection for industrial systems, and those contributions were awarded by academic societies. He also contributes to business based on machine learning techniques, and to a number of issued and disclosed patents. He obtained his B.S. degree in applied mathematics and physics in 1997, and an M.S. degree in systems engineering in 1999, and a Ph.D. degree in informatics in 2007 from Kyoto University in Japan. For more details, refer to <a href="https://hkashima.github.io/publications.html>"https://hkashima.github.io/publications.html</a>.
