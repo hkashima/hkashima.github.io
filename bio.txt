@@ -1,3 +1,4 @@
+[Short Bio]<BR>
 1999年 京都大学 修士課程を修了ののち、日本アイ・ビー・エム株式会社に入社.
 業務の傍ら、2007年に同大学 博士課程を修了し、博士（情報学）の学位を取得．
 2009年より東京大学 准教授を経て、2014年より京都大学 教授．
@@ -5,7 +6,8 @@
 人工知能やその基礎技術である機械学習の研究開発とその実社会応用に従事．
 日本学術振興会賞(2019)等の受賞多数．
 
-
+<hr />
+[A bit longer version]<BR>
 1975年生まれ．
 1997年京都大学工学部数理工学科卒業．
 1999年京都大学大学院工学研究科応用システム科学専攻修士課程修了．
@@ -18,4 +20,6 @@
 2009年情報処理学会 長尾真記念特別賞，2012年マイクロソフトリサーチ日本情報学研究賞，2013年船井情報科学振興財団 船井学術賞，2019年 日本学術振興会賞 等を受賞．
 その他業績等は <a href="https://hkashima.github.io/publications.html>"https://hkashima.github.io/publications.html</a> を参照．
 
+<hr />
+[English Version]<BR>
 Hisashi Kashima is a professor at Department of Intelligence Science and Technology, Kyoto University. Before joining the faculty, he was a research staff member of Data Analytics Group at Tokyo Research Laboratory of IBM Research during April, 1999-July, 2009, and was an associate professor at Department of Mathematical Informatics, The University of Tokyo during August, 2009-March, 2014. His research focuses on foundations of machine learning and data mining, and on their applications in various fields, including marketing, bio-/chemo-informatics, and industrial/business intelligence. His previous research work includes development of kernel methods for structured data, such as trees and graphs, predictive modeling of networks, including biological and social networks, and anomaly detection for industrial systems, and those contributions were awarded by academic societies. He also contributes to business based on machine learning techniques, and to a number of issued and disclosed patents. He obtained his B.S. degree in applied mathematics and physics in 1997, and an M.S. degree in systems engineering in 1999, and a Ph.D. degree in informatics in 2007 from Kyoto University in Japan. For more details, refer to <a href="https://hkashima.github.io/publications.html>"https://hkashima.github.io/publications.html</a>.
