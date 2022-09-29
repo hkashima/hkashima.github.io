@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>2021年度 京都大学 工学部情報学科 「アルゴリズムとデータ構造」</title>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<meta content="MSHTML 6.00.6000.17093" name="GENERATOR">
+<meta http-equiv="Content-Style-Type" content="text/css"></head>
+<body>
+<p><font size="+2"><b>2021年度 京都大学 工学部情報学科 「アルゴリズムとデータ構造」<br>
+</b>
+</font><br>
+担当教員：<a href="index.html">鹿島 久嗣</a><br>
+ 後期・月曜1時限 / <s>総合研究8号館講義室2</s> <font color="red">しばらくはオンラインで実施します</font></a>
+<br>
+
+
+<p></p><strong>【講義の概要</strong>】<br>
+
+アルゴリズムとデータ構造の基本について学びます。<br>
+受講者の方は、PandAの該当ページも必ず確認してください。（毎週の連絡や課題等はそちらに掲示されます。）<br>
+昨年度の内容は<a href="course_algorithm_2020.html">こちら</a>にあります。
+予習等に活用ください。
+
+
+<br>
+<br>
+<strong>【講義資料】</strong> (日程はPandAの「お知らせ」欄を確認ください)<br>
+講義の進行状況等によって順番の前後・内容の追加・削除等あります。 <br>
+ 1. <a href="algorithm2021_1.pdf">アルゴリズムとデータ構造とは</a><br>
+ 2. <a href="algorithm2021_2.pdf">アルゴリズムの評価</a><br>
+ 3. <a href="algorithm2021_3.pdf">リスト・ソート・ヒープソート</a><br>
+ 4. <a href="algorithm2021_4.pdf">分割統治法</a><br>
+ 5. <a href="algorithm2021_5.pdf">順序統計量・動的計画法 </a><br>
+ 6. <a href="algorithm2021_6.pdf">探索問題（２分探索木）</a> <br>
+ 7. <a href="algorithm2021_7.pdf">探索問題（ハッシュ） </a><br>
+ 8. <a href="algorithm2021_8.pdf">近傍探索</a><br>
+ 9. <a href="algorithm2021_9.pdf">グラフ（最短経路問題）</a><br>
+ 10. <a href="algorithm2021_10.pdf">グラフ（最大流問題） </a><br>
+ 11. <a href="algorithm2021_11.pdf">問題の難しさ</a><br>
+ 12. <a href="algorithm2021_12.pdf">難しい問題への対処</a><br>
+ 13. <a href="algorithm2021_13.pdf">近似アルゴリズム・オンラインアルゴリズム</a><br>
+ <br> 
+<br>
+
+</body></html>
+
+
+
